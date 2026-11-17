@@ -1,0 +1,61 @@
+{
+  "name": "pixi-pua",
+  "version": "1.0.0",
+  "description": "Ready-to-use UI animations for PixiJS v7 and v8: presets, CTA popups, buttons, tutorial hands, text and shader effects.",
+  "keywords": [
+    "pixi",
+    "pixijs",
+    "pixi.js",
+    "animation",
+    "ui",
+    "tween",
+    "playable",
+    "shader",
+    "filter"
+  ],
+  "license": "MIT",
+  "author": "Jortsoft",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jortsoft/pixi-pua.git"
+  },
+  "homepage": "https://github.com/Jortsoft/pixi-pua#readme",
+  "bugs": {
+    "url": "https://github.com/Jortsoft/pixi-pua/issues"
+  },
+  "type": "module",
+  "main": "./lib/index.js",
+  "module": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "sources": "node scripts/pua-sources.cjs",
+    "predev": "npm run sources",
+    "dev": "vite",
+    "prebuild": "npm run sources",
+    "build": "vite build",
+    "preview": "vite preview",
+    "build:lib": "node scripts/clean-lib.cjs && tsc -p tsconfig.lib.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "prepublishOnly": "npm run build:lib"
+  },
+  "peerDependencies": {
+    "pixi.js": "^7.0.0 || ^8.0.0"
+  },
+  "devDependencies": {
+    "pixi.js": "^7.1.2",
+    "prettier": "^2.7.1",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.8"
+  }
+}

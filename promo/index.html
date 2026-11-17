@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>pixi-pua promo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Sans:opsz,wght@9..40,400..700&family=JetBrains+Mono:wght@400..700&family=Lilita+One&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html,
+      body {
+        margin: 0;
+        background: #05060d;
+        color: #9a9fc0;
+        font: 14px/1.5 'DM Sans', system-ui, sans-serif;
+      }
+      #stage canvas {
+        display: block;
+        width: 100vw;
+        height: auto;
+        max-height: calc(100vh - 48px);
+        object-fit: contain;
+      }
+      #bar {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        height: 48px;
+        padding: 0 16px;
+      }
+      #play {
+        padding: 6px 16px;
+        border: 0;
+        border-radius: 8px;
+        background: #c8f547;
+        color: #15172e;
+        font: inherit;
+        font-weight: 700;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="stage"></div>
+    <div id="bar">
+      <button id="play" type="button">Play with sound</button>
+      <span id="status">loading</span>
+    </div>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>

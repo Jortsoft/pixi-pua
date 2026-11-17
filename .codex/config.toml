@@ -1,0 +1,10 @@
+model = "gpt-5.5"
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+
+[sandbox_workspace_write]
+network_access = true
+
+[shell_environment_policy]
+inherit = "core"
+include_only = ["PATH", "HOME", "NODE_ENV", "npm_config_registry"]

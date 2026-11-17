@@ -1,0 +1,13 @@
+{
+  "name": "pixi-pua-promo",
+  "private": true,
+  "type": "module",
+  "description": "Source of the pixi-pua promo video. Rendered in the browser and encoded with WebCodecs.",
+  "dependencies": {
+    "mp4-muxer": "^5.2.2"
+  },
+  "scripts": {
+    "dev": "vite --config vite.config.mts",
+    "finalize": "ffmpeg -y -i out/raw.mp4 -c:v libx264 -crf 20 -preset slow -pix_fmt yuv420p -af loudnorm=I=-16:TP=-2:LRA=11,alimiter=limit=0.79:level=disabled -ar 48000 -c:a aac -b:a 192k -movflags +faststart pixi-pua-promo.mp4"
+  }
+}

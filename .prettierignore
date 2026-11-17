@@ -1,0 +1,6 @@
+build
+dist
+node_modules
+*.yaml
+CHANGELOG.md
+src/site/generated

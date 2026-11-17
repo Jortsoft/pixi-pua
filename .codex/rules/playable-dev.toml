@@ -1,0 +1,38 @@
+# Safe commands for playable ad development
+# Equivalent of Claude Code's permissions.allow list
+
+prefix_rule(
+    pattern = ["npm", "run"],
+    decision = "allow",
+    justification = "npm scripts (build, dev, lint) are safe to run",
+)
+
+prefix_rule(
+    pattern = ["npm", "install"],
+    decision = "allow",
+    justification = "Installing dependencies is safe within sandbox",
+)
+
+prefix_rule(
+    pattern = ["npm", "test"],
+    decision = "allow",
+    justification = "Running tests is always safe",
+)
+
+prefix_rule(
+    pattern = ["cat"],
+    decision = "allow",
+    justification = "Reading files is safe",
+)
+
+prefix_rule(
+    pattern = ["ls"],
+    decision = "allow",
+    justification = "Listing files is safe",
+)
+
+prefix_rule(
+    pattern = ["pa-components"],
+    decision = "allow",
+    justification = "Playable components CLI is safe to run",
+)
