@@ -1,5 +1,7 @@
 # pixi-pua — Pixi UI Animations
 
+[![Live Demo](https://img.shields.io/badge/🚀_Live-Demo-6C5CE7?style=for-the-badge)](https://jortsoft.github.io/pixi-pua/)
+
 Ready-to-use UI animations for [PixiJS](https://pixijs.com/): 170 one-line animations for presets, CTA popups, buttons, tutorial hands, text and shader effects. Works with **PixiJS v7 and v8**, ships with **TypeScript** types, has a small built-in tween engine and no dependency other than PixiJS.
 
 ```ts
